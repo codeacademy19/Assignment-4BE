@@ -17,5 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     return 'Already exists';
   });
   Form.getAttributesOfForm = FormName => Form.findAll({ where: { FormName } });
+  Form.getAllForms = () => Form.findAll();
   return Form;
 };

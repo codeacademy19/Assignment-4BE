@@ -10,9 +10,13 @@ const storeFormAttributes = (formName, formAttributes) => model.Form
 const getFormAttributes = formName => model.Form
   .getAttributesOfForm(formName)
   .then(result => result);
+const getAllForms = () => model.Form
+  .getAllForms()
+  .then(result => result);
 module.exports = {
   storeForm,
   getResponsesOfForm,
   storeFormAttributes,
   getFormAttributes,
+  getAllForms,
 };
