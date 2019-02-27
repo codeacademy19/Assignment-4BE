@@ -4,7 +4,15 @@ const storeForm = (formName, formContent) => model.FormData.generate(formName, f
   .then(result => result);
 const getResponsesOfForm = formName => model.FormData.getResponsesOfForm(formName)
   .then(result => result);
+const storeFormAttributes = (formName, formAttributes) => model.Form
+  .generate(formName, formAttributes)
+  .then(result => result);
+const getFormAttributes = (formName, formAttributes) => model.Form
+  .getAttributesOfForm(formName, formAttributes)
+  .then(result => result);
 module.exports = {
   storeForm,
   getResponsesOfForm,
+  storeFormAttributes,
+  getFormAttributes,
 };

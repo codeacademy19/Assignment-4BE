@@ -3,6 +3,7 @@ const model = require('../../models');
 describe('FormData generate', () => {
   beforeEach(async () => {
     await model.FormData.truncate();
+    await model.Form.truncate();
   });
   it('should make an entry in the database with the  given information', async () => {
     await model.FormData.generate('post', { firstname: 'Author1', lastname: 'book1', rate: 3.72 });
