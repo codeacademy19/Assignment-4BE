@@ -7,8 +7,8 @@ const getResponsesOfForm = formName => model.FormData.getResponsesOfForm(formNam
 const storeFormAttributes = (formName, formAttributes) => model.Form
   .generate(formName, formAttributes)
   .then(result => result);
-const getFormAttributes = (formName, formAttributes) => model.Form
-  .getAttributesOfForm(formName, formAttributes)
+const getFormAttributes = formName => model.Form
+  .getAttributesOfForm(formName)
   .then(result => result);
 module.exports = {
   storeForm,
