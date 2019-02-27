@@ -1,7 +1,7 @@
 const pingRoute = require('./ping');
 const storeForm = require('./enterFormResDB');
 const storeFormAttr = require('./enterFormAttrDB');
-const getFormAttr = require('./getFormRes');
+const getFormAttr = require('./getFormAttr');
 
 module.exports = [
   ...pingRoute,
