@@ -10,17 +10,20 @@ describe('Test for form POST route', () => {
   });
   it('should enter all the books with rating to a database', async () => {
     const options = {
+      method: 'GET',
+      url: '/Form/post',
+    };
+    const optionsForDb = {
       method: 'POST',
       url: '/Form/post',
       payload: {
-        FirstName: 'ajay',
+        firstname: 'ajay',
+        lastname: 'balaji',
       },
     };
 
+    await Server.inject(optionsForDb);
     const response = await Server.inject(options);
-    expect(response.statusCode).toEqual(200);
-    expect(response.result).toEqual('created successfully');
-    // const response2 = await Server.inject(options);
-    // expect(response2.result).toEqual('Already exists');
+    expect(typeof response.result).toEqual('object');
   });
 });

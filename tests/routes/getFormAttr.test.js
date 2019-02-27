@@ -23,6 +23,6 @@ describe('Test for form POST route', () => {
 
     await Server.inject(optionsForDb);
     const response = await Server.inject(options);
-    expect(response.result.length).toEqual(1);
+    expect(typeof response.result).toEqual('object');
   });
 });
